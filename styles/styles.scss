@@ -152,6 +152,7 @@ $font: "Gilroy";
 
         .catalogy {
             flex: 4;
+            position: relative;
         }
 
         .delivery,
@@ -194,6 +195,23 @@ $font: "Gilroy";
 
         .nav__list {
             margin-top: 14px;
+            .nav__item:first-child .nav__link::after{
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top:4px;
+                left:42.7%;
+                height: 15px;
+                border-left: 2px solid grey;
+            }
+            .nav__item:first-child .nav__link::before{
+                content: '';
+                position: absolute;
+                top:50%;
+                left: 41.6%;
+                width: 15px;
+                border-bottom: 2px solid grey;
+            }
         }
 
         .nav__link {
@@ -202,7 +220,19 @@ $font: "Gilroy";
             font-size: 18px;
             text-transform: uppercase;
             letter-spacing: 3.5px;
+            &:hover{
+                color: lightgray;
+                &::after,&::before{
+                    border-color: black;
+                }
+                
+            }
         }
+        /* .nav__list .nav__item .nav__link:hover{
+            color: lightgray;
+            border-color: lightgrey;
+        }  */      
+        
     }
 
 }

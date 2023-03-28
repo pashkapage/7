@@ -133,6 +133,7 @@ body {
 .header .top-list .catalogy,
 .header .nav__list .catalogy {
   flex: 4;
+  position: relative;
 }
 .header .top-list .delivery,
 .header .top-list .assurance,
@@ -165,9 +166,30 @@ body {
 }
 .header .nav {
   padding-left: 60px;
+  /* .nav__list .nav__item .nav__link:hover{
+      color: lightgray;
+      border-color: lightgrey;
+  }  */
 }
 .header .nav .nav__list {
   margin-top: 14px;
+}
+.header .nav .nav__list .nav__item:first-child .nav__link::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 4px;
+  left: 42.7%;
+  height: 15px;
+  border-left: 2px solid grey;
+}
+.header .nav .nav__list .nav__item:first-child .nav__link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 41.6%;
+  width: 15px;
+  border-bottom: 2px solid grey;
 }
 .header .nav .nav__link {
   font-family: "Gilroy";
@@ -175,4 +197,10 @@ body {
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 3.5px;
+}
+.header .nav .nav__link:hover {
+  color: lightgray;
+}
+.header .nav .nav__link:hover::after, .header .nav .nav__link:hover::before {
+  border-color: black;
 }/*# sourceMappingURL=styles.css.map */
