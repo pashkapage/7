@@ -1,0 +1,208 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/") format("woff2"),
+        url("../fonts/gilroyextrabold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/gilroylight.woff2") format("woff2"),
+        url("../fonts/gilroylight.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+$color: #f7e296;
+$font: "Gilroy";
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 1160px;
+    height: 300px;
+    background-color: $color;
+    margin: 0 auto;
+    margin-top: 40px;
+    position: relative;
+    font-family: "Gilroy", sans-serif;
+
+    .sign-in {
+        flex: 2;
+        padding-right: 20px;
+
+        .sign-in__img {
+            padding-right: 10px;
+        }
+    }
+
+    .compare {
+        flex: 1;
+
+        .compare__img {
+            padding-right: 10px;
+        }
+    }
+
+    .shopping-cart {
+        flex: 1;
+        padding-right: 10px;
+
+        .shopping-cart__img {
+            padding-right: 10px;
+        }
+    }
+
+    .search {
+        flex: 4;
+    }
+
+    .search__form {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+        .search__input {
+            position: relative;
+            border: 0px;
+            background-color: transparent;
+            padding-left: 35px;
+            padding-top: 0;
+            padding-bottom: 0;
+            height: 50px;
+            outline: none;
+            font-family: "Gilroy";
+            font-size: 16px;
+            width: 70%;
+            cursor: pointer;
+
+            &::placeholder {
+                font-family: inherit;
+                font-size: inherit;
+            }
+
+            &:focus {
+                box-shadow: 0px 2px black;
+
+                +.search__btn {
+                    visibility: visible;
+                    outline: 2px solid black;
+
+                    +&:hover {
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .search__img {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 0;
+            cursor: pointer;
+        }
+
+        .search__btn {
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            right: 23%;
+            top: 0;
+            height: 50px;
+            border: 0;
+            font-family: "Gilroy";
+            font-size: 16px;
+            cursor: pointer;
+            visibility: hidden;
+            background-color: transparent;
+        }
+
+
+    }
+
+    .top-list,
+    .nav__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        list-style-type: none;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 0;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .catalogy {
+            flex: 4;
+        }
+
+        .delivery,
+        .assurance {
+            flex: 1;
+        }
+
+        .contacts {
+            flex: 2;
+        }
+    }
+
+    .top-list {
+        margin-top: 33px;
+        padding-left: 65px;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    .header__link-home {
+        &:hover {
+            transition: 0.3s;
+            opacity: 0.6;
+        }
+
+        &:active {
+            transition: 0.3s;
+            opacity: 0.3;
+        }
+    }
+
+    .header__caption {
+        position: absolute;
+        top: -20px;
+        left: 60px;
+    }
+
+    .nav {
+        padding-left: 60px;
+
+        .nav__list {
+            margin-top: 14px;
+        }
+
+        .nav__link {
+            font-family: $font;
+            font-weight: 800;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 3.5px;
+        }
+    }
+
+}

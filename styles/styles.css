@@ -1,0 +1,178 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroylight.woff2") format("woff2"), url("../fonts/gilroylight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  height: 300px;
+  background-color: #f7e296;
+  margin: 0 auto;
+  margin-top: 40px;
+  position: relative;
+  font-family: "Gilroy", sans-serif;
+}
+.header .sign-in {
+  flex: 2;
+  padding-right: 20px;
+}
+.header .sign-in .sign-in__img {
+  padding-right: 10px;
+}
+.header .compare {
+  flex: 1;
+}
+.header .compare .compare__img {
+  padding-right: 10px;
+}
+.header .shopping-cart {
+  flex: 1;
+  padding-right: 10px;
+}
+.header .shopping-cart .shopping-cart__img {
+  padding-right: 10px;
+}
+.header .search {
+  flex: 4;
+}
+.header .search__form {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.header .search__form .search__input {
+  position: relative;
+  border: 0px;
+  background-color: transparent;
+  padding-left: 35px;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 50px;
+  outline: none;
+  font-family: "Gilroy";
+  font-size: 16px;
+  width: 70%;
+  cursor: pointer;
+}
+.header .search__form .search__input::-moz-placeholder {
+  font-family: inherit;
+  font-size: inherit;
+}
+.header .search__form .search__input::placeholder {
+  font-family: inherit;
+  font-size: inherit;
+}
+.header .search__form .search__input:focus {
+  box-shadow: 0px 2px black;
+}
+.header .search__form .search__input:focus + .search__btn {
+  visibility: visible;
+  outline: 2px solid black;
+}
+.header .search__form .search__input:focus + .search__btn:hover {
+  background-color: black;
+  color: white;
+}
+.header .search__form .search__img {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+  cursor: pointer;
+}
+.header .search__form .search__btn {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  right: 23%;
+  top: 0;
+  height: 50px;
+  border: 0;
+  font-family: "Gilroy";
+  font-size: 16px;
+  cursor: pointer;
+  visibility: hidden;
+  background-color: transparent;
+}
+.header .top-list,
+.header .nav__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  list-style-type: none;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 0;
+}
+.header .top-list a,
+.header .nav__list a {
+  text-decoration: none;
+  color: black;
+}
+.header .top-list .catalogy,
+.header .nav__list .catalogy {
+  flex: 4;
+}
+.header .top-list .delivery,
+.header .top-list .assurance,
+.header .nav__list .delivery,
+.header .nav__list .assurance {
+  flex: 1;
+}
+.header .top-list .contacts,
+.header .nav__list .contacts {
+  flex: 2;
+}
+.header .top-list {
+  margin-top: 33px;
+  padding-left: 65px;
+  font-weight: 300;
+  font-size: 16px;
+}
+.header .header__link-home:hover {
+  transition: 0.3s;
+  opacity: 0.6;
+}
+.header .header__link-home:active {
+  transition: 0.3s;
+  opacity: 0.3;
+}
+.header .header__caption {
+  position: absolute;
+  top: -20px;
+  left: 60px;
+}
+.header .nav {
+  padding-left: 60px;
+}
+.header .nav .nav__list {
+  margin-top: 14px;
+}
+.header .nav .nav__link {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+}/*# sourceMappingURL=styles.css.map */
